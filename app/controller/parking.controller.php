@@ -18,8 +18,9 @@ class Parking {
 
     public function showParking() {
         $this->chequeo->checkLoggedIn();
+        $user = $this->chequeo->autorizacion();
         $parking = $this->model->getAllData();
-        $this->view->showParking($parking);
+        $this->view->showParking($parking, $user);
     }
     public function addParking() {
 

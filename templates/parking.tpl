@@ -8,10 +8,12 @@
                 <button id="parkingModal" class="btsControll btn btn-success">
                     Agregar nuevo estacionamiento
                 </button>
+                {if $usuario == 'admin'}
                 <button id="btnEliminar" class="btsControll btn btn-danger activo">
                     Eliminar
                 </button>
-
+                {/if}
+                
                 <div class="modalParking">
                 </div>
 

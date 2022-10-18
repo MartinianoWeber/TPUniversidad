@@ -8,7 +8,8 @@ class ParkingView {
         $this->smarty = new Smarty();
     }
 
-    function showParking($parking) {
+    function showParking($parking, $user) {
+        $this->smarty->assign('usuario', $user);
         $this->smarty->assign('parkeos', $parking);
         $this->smarty->display('templates/parking.tpl');
     }

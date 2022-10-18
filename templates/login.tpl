@@ -23,7 +23,7 @@
                 <label class="labelLogin" for="chk" aria-hidden="true">Iniciar sesion</label>
                  <div class="selectRegistro__container">
                     <select class="selectRegistro" id="tipo" name="tipo" >
-                        <option value="administrador">Admin</option>
+                        <option value="admin">Admin</option>
                         <option value="empleado">Empleado</option>
                     </select>
                 </div>
