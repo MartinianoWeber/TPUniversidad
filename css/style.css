@@ -1,0 +1,398 @@
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/* Generales */
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Nunito";
+  color: #000000;
+  margin: 0;
+}
+
+textarea {
+  resize: none;
+}
+
+ul {
+  padding: 0;
+}
+
+/** Utilidades **/
+.d-flex {
+  display: flex;
+}
+
+.spaceAround {
+  justify-content: space-around;
+}
+
+.no-margin {
+  margin: 0;
+}
+
+.no-padding {
+  padding: 0;
+}
+
+.centrar-texto {
+  text-align: center;
+}
+
+.content {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  background-color: #000000;
+}
+
+.main {
+  width: 350px;
+  height: 500px;
+  overflow: hidden;
+  margin: auto;
+  margin-top: 5rem;
+  background-color: #F8475F;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+}
+
+#chk {
+  display: none;
+}
+
+.signup {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.selectRegistro__container {
+  display: flex;
+  justify-content: center;
+}
+
+.selectRegistro {
+  width: 60%;
+  outline: none;
+  border: none;
+  font-size: 1.5rem;
+}
+
+.labelLogin {
+  color: #fff;
+  font-size: 3rem;
+  justify-content: center;
+  display: flex;
+  margin: 60px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
+}
+
+.inputLogin {
+  width: 60%;
+  height: 20px;
+  background: #e0dede;
+  justify-content: center;
+  display: flex;
+  margin: 20px auto;
+  font-size: 1.5rem;
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+}
+
+.btnLogin {
+  width: 60%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  display: block;
+  color: #fff;
+  background: #573b8a;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  transition: 0.2s ease-in;
+  cursor: pointer;
+}
+
+.btnLogin:hover {
+  background: #6d44b8;
+}
+
+.login {
+  height: 460px;
+  background: #eee;
+  border-radius: 60%/10%;
+  transform: translateY(-180px);
+  transition: 0.8s ease-in-out;
+}
+
+.login label {
+  color: #573b8a;
+  transform: scale(0.6);
+}
+
+#chk:checked ~ .login {
+  transform: translateY(-500px);
+}
+
+#chk:checked ~ .login label {
+  transform: scale(1);
+}
+
+#chk:checked ~ .signup label {
+  transform: scale(0.6);
+}
+
+.modalHome {
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.modalCliente {
+  display: none;
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.modalCliente__container {
+  width: 450px;
+  height: 300px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 10rem;
+  box-shadow: 5px 20px 50px #000;
+}
+
+.modalAuto {
+  display: none;
+  position: fixed;
+  width: 100%;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.modalAuto__container {
+  width: 450px;
+  height: 370px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 10rem;
+  box-shadow: 5px 20px 50px #000;
+}
+
+.cardHome__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  overflow: hidden;
+  overflow-y: scroll;
+  height: 88%;
+  padding: 1rem;
+}
+
+.cardHome {
+  width: 230px;
+  height: 330px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 5px 20px 50px #000;
+  margin: 0 auto;
+}
+.cardHome .cardHome__img {
+  display: flex;
+  position: relative;
+}
+.cardHome .cardHome__img img {
+  width: 200px;
+  height: 180px;
+  margin: 0 auto;
+}
+.cardHome .cardHome__text {
+  text-align: center;
+}
+
+.cardHome__btns {
+  position: absolute;
+  width: 100%;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+.cardHome__btns button {
+  font-size: 1.3em;
+}
+.cardHome__btns button:nth-child(1) {
+  background-color: red;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+}
+.cardHome__btns button:nth-child(2) {
+  background-color: green;
+  color: #fff;
+  border: none;
+  border-radius: 2rem;
+}
+
+.swal2-popup {
+  font-size: 1.6rem !important;
+}
+
+.btsControll {
+  width: 25%;
+  height: 40px;
+  margin: 10px auto;
+  justify-content: center;
+  color: #fff;
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-top: 20px;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modalParking {
+  position: fixed;
+  width: 80%;
+  display: none;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.623);
+}
+
+.cerrarModal {
+  background-color: #a00f0f;
+  border-radius: 3rem;
+  margin-top: 1rem;
+  width: 30px;
+  height: 30px;
+  outline: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+}
+
+.modal__container {
+  width: 450px;
+  height: 200px;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-top: 10rem;
+  box-shadow: 5px 20px 50px #000;
+}
+
+.textoMuted {
+  font-size: 1rem;
+  color: #000;
+}
+
+.cardContainer {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 1rem;
+  height: 80%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.cardEstacionamiento {
+  margin: auto;
+  background-color: #8d8d8d;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 1rem;
+  border-radius: 1rem;
+}
+.cardEstacionamiento img {
+  margin: auto;
+  width: 150px;
+  height: 150px;
+}
+.cardEstacionamiento p {
+  text-align: center;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.cardEstacionamiento__btns {
+  display: none;
+  margin-left: auto;
+  margin-bottom: -1rem;
+  margin-top: -0.5rem;
+}
+.cardEstacionamiento__btns a {
+  width: auto;
+  height: 40px;
+  background-color: transparent;
+  cursor: pointer;
+}
+.cardEstacionamiento__btns a img {
+  width: 100%;
+  height: 100%;
+}
+
+.tablaGanancia {
+  width: 90%;
+  margin: auto;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+.tablaGanancia thead {
+  background-color: #ccc;
+}
+.tablaGanancia thead th {
+  padding: 1rem;
+  text-align: center;
+}
+.tablaGanancia tbody tr td {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+.tableDashboard {
+  width: 100%;
+  margin: auto;
+  border: 1px solid #ccc;
+  font-size: 1.5rem;
+}
+.tableDashboard thead {
+  background-color: #ccc;
+}
+.tableDashboard thead th {
+  padding: 1rem;
+  text-align: center;
+}
+.tableDashboard tbody tr td {
+  text-align: center;
+  border: 1px solid #ccc;
+}
+
+/*# sourceMappingURL=style.css.map */
