@@ -30,14 +30,10 @@ class Home {
     public function showHome() {
         $this->chequeo->checkLoggedIn();
         $user = $this->chequeo->autorizacion();
-        echo $user;
-        // $parking = $this->parkingModel->getAllData();
-
+        $parking = $this->parkingModel->getAllData();
         $cliente = $this->clienteModel->getAllCliente();
-
-        // $autos = $this->autoModel->getAllAutos();
-        
-        // $this->view->showHome($parking, $cliente, $autos, $user);
+        $autos = $this->autoModel->getAllAutos();
+        $this->view->showHome($parking, $cliente, $autos, $user);
     }
 
     public function addClient() {
